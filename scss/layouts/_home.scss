@@ -1,0 +1,104 @@
+
+.homepage {
+	text-align: center;
+
+	.container {
+		margin: 40px auto;
+	}
+
+	.hero {
+		background: url('../img/construction-advisors.png');
+		background-size: cover;
+		min-height: 800px;
+		text-align: left;
+		padding: 200px 0 0 5%;
+
+		@media screen and (max-width: $lg-breakpoint) {
+            background-position: -250px 0;
+        }
+        @media screen and (max-width: $md-breakpoint) {
+            background-position: -300px 0;
+        }
+
+		h1 {
+			color: $dark-blue;
+			font-size: 55px;
+			line-height: 1.1em;
+			max-width: 500px;
+
+			@media screen and (max-width: $sm-breakpoint) {
+	            font-size: 45px;
+	        }
+		}
+	}
+
+	.careers {
+		background: url('../img/icon-bg.png') repeat;
+		background-size: cover;
+		padding: 40px 0 0;
+
+		.container {
+			text-align: center;
+		}
+	}
+
+	.icons {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 40px;
+
+		@include flex-col-layout();
+
+		div {
+			align-self: center;
+		}
+
+		img {
+			align-self: center;
+			max-height: 130px;
+			width: auto;
+		}
+		p {
+			color: $white;
+			font-size: 1.3em;
+			margin-top: 20px;
+		}
+	}
+
+	.mobile {
+		>h2 {
+			color: $gray;
+		}
+	}
+
+	.video .container {
+
+		>img {
+			width: 100%;
+		}
+
+		.playbar {
+			display: flex;
+			margin-top: -57px;
+
+			.text {
+				background: rgba(255, 164, 47, .6);
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				color: $white;
+				font-size: 2em;
+				flex: 1 1 0;
+				padding-left: 30px;
+			}
+		}
+	}
+
+	.change {
+		margin-top: 100px;
+		background: url('../img/testimonial.png');
+		background-size: cover;
+		min-height: 700px;
+	}
+}

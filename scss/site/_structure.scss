@@ -1,0 +1,95 @@
+
+
+h1 {
+	font-size: 45px;
+}
+
+h2 {
+	color: $orange;
+	font-size: 38px;
+	margin-top: 50px;
+
+	&.gray {
+		color: $gray;
+	}
+}
+
+p {
+	font-family: $secondary-font;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 1.4em;
+	margin-bottom: 20px;
+}
+
+.container {
+	max-width: $content-max-width;
+	text-align: left;
+
+	@media screen and (max-width: $lg-breakpoint) {
+        text-align: center;
+    }
+}
+
+.btn {
+	background: $dark-blue;
+	color: $orange;
+	font-size: 24px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: $menu-transition;
+	padding: 15px 40px;
+
+	&:hover {
+		background: $orange;
+		color: $white;
+	}
+}
+
+.orange {
+	display: block;
+
+	.btn {
+		background: $orange;
+		color: $white;
+
+		&:hover {
+			background: $dark-blue;
+			color: $orange;
+		}
+	}
+}
+
+.gray {
+	display: block;
+	
+	.btn {
+		background: $gray;
+		color: $white;
+
+		&:hover {
+			background: $dark-gray;
+		}
+	}
+}
+
+.two-column {
+	display: flex;
+
+	@include flex-col-layout();
+
+	h2 {
+		margin-top: 50px;
+	}
+
+	>div {
+		margin: 0 auto;
+		width: 50%;
+
+		@include mobile-full-width();
+	}
+
+	span {
+		display: flex;
+	}
+}
